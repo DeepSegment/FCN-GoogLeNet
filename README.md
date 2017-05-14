@@ -49,3 +49,8 @@ Blog posts worth mentioning are: (some of this can also be found by the end of h
 ## Some links about previous people asking about this but with no success. LOL:
 http://stackoverflow.com/questions/38536202/how-to-use-inception-v3-as-a-convolutional-network
 http://stackoverflow.com/questions/38565497/tensorflow-transfer-learning-implementation-semantic-segmentation
+
+## Avaliable Datasets
+[PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html), 
+[MS-Coco](http://mscoco.org/dataset/#overview),
+[MIT Scene Parsing](http://sceneparsing.csail.mit.edu/)
