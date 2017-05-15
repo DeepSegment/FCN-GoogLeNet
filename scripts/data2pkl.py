@@ -13,7 +13,7 @@ import numpy as np
 import os
 
 
-def dir_to_dataset(glob_files, loc_train_labels=""):
+def dir_to_dataset(glob_files, loc_train_labels = ""):
     print("To be processed:\n\t %s"%glob_files)
     dataset = []
     delete_file = []
@@ -44,7 +44,7 @@ Data, delete_file = dir_to_dataset(file_dir, "")
 train_set_x = Data
 
 # write data into a .pkl file
-f = open('/Users/MMGF2/Desktop/dl_pro/datasets/tr_x_batch_1.pkl','wb')
+f = open('/Users/MMGF2/Desktop/dl_pro/datasets/tr_x_batch_1.pkl', 'wb')
 pickle.dump(train_set_x, f)
 f.close()
 
