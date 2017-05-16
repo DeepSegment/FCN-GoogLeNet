@@ -4,6 +4,8 @@
 Created on Tue May 16 15:31:04 2017
 
 @author: txzhao
+
+part of code are from https://github.com/Hvass-Labs/TensorFlow-Tutorials
 """
 
 import numpy as np
