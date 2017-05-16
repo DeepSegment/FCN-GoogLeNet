@@ -36,15 +36,26 @@ def dir_to_dataset(glob_files, loc_train_labels = ""):
     return np.array(dataset), delete_file
 
 
-# define the directory of a dataset
-file_dir = "/Users/MMGF2/Desktop/dl_pro/datasets/MIT_Scene_Parsing/ADEChallengeData2016/images/bedroom_tr//*.jpg"
-Data, delete_file = dir_to_dataset(file_dir, "")
+# define read directory of a dataset
+tr_file_x_dir1 = "/Users/MMGF2/Desktop/dl_pro/datasets/MIT_Scene_Parsing/ADEChallengeData2016/images/bedroom_tr1//*.jpg"
+tr_file_x_dir2 = "/Users/MMGF2/Desktop/dl_pro/datasets/MIT_Scene_Parsing/ADEChallengeData2016/images/bedroom_tr2//*.jpg"
+tr_file_y_dir1 = "/Users/MMGF2/Desktop/dl_pro/datasets/MIT_Scene_Parsing/ADEChallengeData2016/annotations/bedroom_tr_label//*.png"
+tr_file_y_dir2 = "/Users/MMGF2/Desktop/dl_pro/datasets/MIT_Scene_Parsing/ADEChallengeData2016/annotations/bedroom_tr_label2//*.png"
+
+# read in image data
+Data, delete_file = dir_to_dataset(tr_file_y_dir1, "")
 
 # regroup data
 train_set_x = Data
 
-# write data into a .pkl file
-f = open('/Users/MMGF2/Desktop/dl_pro/datasets/tr_x_batch_1.pkl', 'wb')
+# define write directory of .pkl files
+tr_x_dir1 = '/Users/MMGF2/Desktop/dl_pro/datasets/tr_x_batch_1.pkl'
+tr_x_dir2 = '/Users/MMGF2/Desktop/dl_pro/datasets/tr_x_batch_2.pkl'
+tr_y_dir1 = '/Users/MMGF2/Desktop/dl_pro/datasets/tr_y_batch_1.pkl'
+tr_y_dir2 = '/Users/MMGF2/Desktop/dl_pro/datasets/tr_y_batch_2.pkl'
+
+# write data into .pkl files
+f = open(tr_y_dir1, 'wb')
 pickle.dump(train_set_x, f)
 f.close()
 
