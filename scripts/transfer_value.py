@@ -24,7 +24,6 @@ from sklearn.metrics import confusion_matrix
 import pickle
 
 
-
 # ================  define function  ================
 def plot_images(images, cls_true = "", cls_pred = None, smooth = True):
 
