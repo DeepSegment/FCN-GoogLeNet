@@ -257,6 +257,7 @@ print("Processing Inception transfer-values for training-images ...")
 transfer_values_train = transfer_values_cache(cache_path = file_path_cache_train, 
                                               images = images_train_scaled, model = model)
 
+# load transfer values
 pickle_filename = "inception_pasvoc_tr_100.pkl"
 pickle_dir = "/Users/MMGF2/Desktop/dl_pro/datasets/transfer_values/"
 pickle_filepath = os.path.join(pickle_dir, pickle_filename)
