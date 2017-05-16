@@ -15,7 +15,7 @@ from datetime import timedelta
 import os
 import inception
 import prettytensor as pt
-import pascal_voc
+import scene_parse
 from cifar10 import num_classes
 from inception import transfer_values_cache
 from sklearn.decomposition import PCA
@@ -229,7 +229,7 @@ def main():
 # ================  data preparation  ================
 
 # load class-names, training data and test data
-images_train_x, images_train_y = pascal_voc.load_training_data()
+images_train_x, images_train_y = scene_parse.load_training_data()
 
 
 # print out the size of dataset
@@ -247,7 +247,7 @@ inception.maybe_download()
 model = inception.Inception()
 
 # set path for cache files
-file_path_cache_train = os.path.join(pascal_voc.data_path, 'inception_pasvoc_tr_100.pkl')
+file_path_cache_train = os.path.join(scene_parse.data_path, 'inception_pasvoc_tr_100.pkl')
 
 # scale images from [0,1] to [0,255]
 images_train_scaled = images_train_x*255.0	
