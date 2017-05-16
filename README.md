@@ -3,15 +3,13 @@ This is an initial repo for Deep Learning Project.
 
 This is a Tensorflow Implementation of [Fully Convolutional Networks for Semantic Segmentation, CVPR 2015](https://github.com/shelhamer/fcn.berkeleyvision.org).
 
-To do things a bit differently, we would like to take a [GoogLeNet (Inception v3)](https://github.com/tensorflow/models/tree/master/slim) and do this.
+To do things a bit differently, we would like to take a [GoogLeNet (Inception v3)](https://github.com/tensorflow/models/tree/master/slim) as our pre-trained model, add convolutional layers on the top (upsampling) and fine-tune it.
 
 There is also a Tensorflow implementation here: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow).
 
 This project would mostly based on these previous work.
 
-# Edit this on Github Directly is WRONG!
 
-# Things that Yang found interesting
 ## Here is the presentation given by the authors of the original paper.
 http://techtalks.tv/talks/fully-convolutional-networks-for-semantic-segmentation/61606/
 
