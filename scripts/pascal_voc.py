@@ -126,6 +126,7 @@ def load_training_data():
 
     return images_x, images_y
 
+
 # TODO LIST
 def load_test_data():
     """
@@ -137,4 +138,3 @@ def load_test_data():
 
     return images
 
-########################################################################
