@@ -28,10 +28,16 @@ http://techtalks.tv/talks/fully-convolutional-networks-for-semantic-segmentation
 
 			I stopped at 8:30 in the video -->
 
-## This is about CONVERT fully connected layer to convolutional layer:
+## Avaliable Datasets
+[PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html), 
+[MS-Coco](http://mscoco.org/dataset/#overview),
+[MIT Scene Parsing](http://sceneparsing.csail.mit.edu/)
+
+## Extra Reading
+### This is about CONVERT fully connected layer to convolutional layer:
 http://cs231n.github.io/convolutional-networks/#convert
 
-## This is someone basically did what we want to do
+### This is someone basically did what we want to do
 This guy's [Blog](http://warmspringwinds.github.io/blog/) and his [TensorFlow Image Segmentation](https://github.com/warmspringwinds/tf-image-segmentation) can be useful. 
 
 <!-- Blog posts worth mentioning are: (some of this can also be found by the end of his project README)
@@ -44,11 +50,8 @@ This guy's [Blog](http://warmspringwinds.github.io/blog/) and his [TensorFlow Im
 
 [About Upsampling](http://warmspringwinds.github.io/tensorflow/tf-slim/2016/11/22/upsampling-and-image-segmentation-with-tensorflow-and-tf-slim/)
 
-## Some links about previous people asking about this but with no success. LOL:
+### Some links about previous people asking about this but with no success. LOL:
 http://stackoverflow.com/questions/38536202/how-to-use-inception-v3-as-a-convolutional-network
 http://stackoverflow.com/questions/38565497/tensorflow-transfer-learning-implementation-semantic-segmentation -->
 
-## Avaliable Datasets
-[PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html), 
-[MS-Coco](http://mscoco.org/dataset/#overview),
-[MIT Scene Parsing](http://sceneparsing.csail.mit.edu/)
+
