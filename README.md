@@ -40,7 +40,7 @@ http://cs231n.github.io/convolutional-networks/#convert
 ### This is someone basically did what we want to do
 This guy's [Blog](http://warmspringwinds.github.io/blog/) and his [TensorFlow Image Segmentation](https://github.com/warmspringwinds/tf-image-segmentation) can be useful. 
 
-### This is a helpful tutorial with some basic tensorflow implementations
+### This is a helpful tensorflow tutorial
 https://github.com/Hvass-Labs/TensorFlow-Tutorials
 
 <!-- Blog posts worth mentioning are: (some of this can also be found by the end of his project README)
