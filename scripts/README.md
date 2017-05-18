@@ -2,10 +2,12 @@
 
 * scene_parse.py: to define functions which are related to resize, scale and load data;
 
-* inception.py: to define functions of the inception model
+* inception.py: to define functions of the inception model;
 
-* cache.py: to define functions to restore the transfer values in a cache file
+* cache.py: to define functions to restore the transfer values in a cache file;
 
 * transfer_value.py: to input the pickle file to the Googlenet and restore the transfer values in a cache file.
+
+Run transfer_value.py to get the cache file; run data2pkl.py to create your own pickle file
 
 
