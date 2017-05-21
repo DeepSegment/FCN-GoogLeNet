@@ -1,0 +1,6 @@
+logs/*
+checkpoints/*
+.idea
+Data_zoo/*
+Model_zoo/*
+*.pyc
