@@ -1,14 +1,22 @@
-# ConvNet-Segment
-This is an initial repo for Deep Learning Project.
+# FCN-GoogLeNet
+This is a repo for course project of DD2424 Deep Learning in Data Science at KTH.
 
-This is a Tensorflow Implementation of [Fully Convolutional Networks for Semantic Segmentation, CVPR 2015](https://github.com/shelhamer/fcn.berkeleyvision.org).
+This project is a GoogLeNet Implementation of [Fully Convolutional Networks for Semantic Segmentation, CVPR 2015](https://github.com/shelhamer/fcn.berkeleyvision.org) in TensorFlow. Another Tensorflow implementation here: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow). 
 
-To do things a bit differently, we would like to take a [GoogLeNet (Inception v3)](https://github.com/tensorflow/models/tree/master/slim) as our pre-trained model, add convolutional layers on the top (upsampling) and fine-tune it.
+This project is mostly based on these previous works.
 
-There is also a Tensorflow implementation here: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow).
+## Changes from previous work
 
-This project would mostly based on these previous work.
+- Pre-trained model: VGG16 -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/slim)
+- Framework: Caffe -> TensorFlow
+- Datasets: PASCAL VOC 2012 (20 classes) + MIT Scene Parsing (150 classes)
 
+## Pipeline
+
+- Convolutionalize GoogLeNet into FCN-GoogLeNet
+- Add upsampling layers on the top
+- Fuse skip layers in network
+- Fine-tune whole net from end to end
 
 ## Here is the presentation given by the authors of the original paper.
 http://techtalks.tv/talks/fully-convolutional-networks-for-semantic-segmentation/61606/
