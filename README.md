@@ -20,14 +20,14 @@ Our project is mainly based on these previous works and we performed several cha
 
 ## Skip architectures
 
-![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/skip.png)
+![skip FCNs](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/skip.png)
 
 ## Results
 
-![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_0.png)
-![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_1.png)
-![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png)
-![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png)
+![PASCAL VOC](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_0.png)
+![PASCAL VOC](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_1.png)
+![MIT Scene Parsing](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png)
+![MIT Scene Parsing](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png)
 
 ## Related materials
 ### Here is the presentation given by the authors of the original paper.
