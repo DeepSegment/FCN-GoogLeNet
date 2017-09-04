@@ -18,7 +18,18 @@ Our project is mainly based on these previous works and we performed several cha
 - Fuse skip layers in network
 - Fine-tune whole net from end to end
 
-## Related Materials
+## Skip architectures
+
+![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/skip.png)
+
+## Results
+
+![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_0.png)
+![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_1.png)
+![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png)
+![Caption](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png)
+
+## Related materials
 ### Here is the presentation given by the authors of the original paper.
 http://techtalks.tv/talks/fully-convolutional-networks-for-semantic-segmentation/61606/
 
