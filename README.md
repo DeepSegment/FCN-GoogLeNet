@@ -25,6 +25,11 @@ Our project is mainly based on these previous works and we performed several cha
 
 ## Results
 
+#### Training loss
+<p align="center">
+<img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/loss.png"/>
+</p>
+
 #### PASCAL VOC
 <p align="center">
 <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_0.png" width="430"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_1.png" width="430">
