@@ -26,11 +26,13 @@ Our project is mainly based on these previous works and we performed several cha
 ## Results
 
 #### PASCAL VOC
+<p align="center">
 <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_0.png" width="430"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_1.png" width="430">
+</p>
 
 #### MIT Scene Parsing
 <p align="center">
-  <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png" width="400"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png" width="400">
+  <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png" width="380"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png" width="400">
 </p>
 
 ## Related materials
