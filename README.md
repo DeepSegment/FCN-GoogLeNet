@@ -7,7 +7,7 @@ This project is mostly based on these previous works.
 
 ## Changes from previous work
 
-- Pre-trained model: VGG16 -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/slim)
+- Pre-trained model: [VGG16](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/slim)
 - Framework: Caffe -> TensorFlow
 - Datasets: [PASCAL VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) (20 classes) + [MIT Scene Parsing](http://sceneparsing.csail.mit.edu/) (150 classes)
 
