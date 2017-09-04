@@ -21,7 +21,7 @@ tf.flags.DEFINE_string("logs_dir", "logs/all", "path to logs directory")
 tf.flags.DEFINE_string("data_dir", "Data_zoo/Pascal_Voc/", "path to dataset")
 tf.flags.DEFINE_float("learning_rate", "0.00032", "Learning rate for Adam Optimizer")
 tf.flags.DEFINE_bool('debug', "False", "Debug mode: True/ False")
-tf.flags.DEFINE_string('mode', "visualizei", "Mode train/ test/ visualize")
+tf.flags.DEFINE_string('mode', "train", "Mode: train/ test/ visualize")
 # according to train_image_classifier.py
 tf.flags.DEFINE_string(
     'train_dir', 'logs/all',
