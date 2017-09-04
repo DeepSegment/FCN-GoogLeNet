@@ -32,7 +32,7 @@ Our project is mainly based on these previous works and we performed several cha
 
 #### MIT Scene Parsing
 <p align="center">
-  <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png" width="390"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png" width="400">
+  <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png" width="390"/>   <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png" width="400">
 </p>
 
 ## Related materials
