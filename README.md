@@ -29,7 +29,9 @@ Our project is mainly based on these previous works and we performed several cha
 <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_0.png" width="430"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_1.png" width="430">
 
 #### MIT Scene Parsing
-<img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png" width="430"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png" width="430">
+<p align="center">
+  <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png" width="400"/> <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png" width="400">
+</p>
 
 ## Related materials
 ### Here is the presentation given by the authors of the original paper.
