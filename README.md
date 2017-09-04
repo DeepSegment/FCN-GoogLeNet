@@ -20,12 +20,15 @@ Our project is mainly based on these previous works and we performed several cha
 
 ## Skip architectures
 
+#### Skip FCNs
 ![skip FCNs](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/skip.png)
 
 ## Results
 
+#### PASCAL VOC
 ![PASCAL VOC](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_0.png)
 ![PASCAL VOC](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_1.png)
+#### MIT Scene Parsing
 ![MIT Scene Parsing](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png)
 ![MIT Scene Parsing](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png)
 
