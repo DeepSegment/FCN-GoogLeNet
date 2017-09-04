@@ -1,9 +1,9 @@
 # FCN-GoogLeNet
 This is a repo for course project of [DD2424 Deep Learning in Data Science](https://www.kth.se/social/course/DD2424/) at KTH.
 
-This project is a GoogLeNet Implementation of [Fully Convolutional Networks for Semantic Segmentation, CVPR 2015](https://github.com/shelhamer/fcn.berkeleyvision.org) in TensorFlow. Another Tensorflow implementation here: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow). 
+This project is a GoogLeNet Implementation of [Fully Convolutional Networks for Semantic Segmentation, CVPR 2015](https://github.com/shelhamer/fcn.berkeleyvision.org) in TensorFlow. Another Tensorflow implementation: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow). 
 
-This project is mostly based on these previous works.
+Our project is mainly based on these previous works and we performed several changes from them.
 
 ## Changes from previous work
 
