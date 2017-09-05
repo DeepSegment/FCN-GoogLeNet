@@ -35,7 +35,7 @@ Our project is mainly based on these previous works and we performed several cha
 
 ### Visualize and test results 
 
-First download model checkpoints we've trained and put it in folder /logs and replace any other checkpoints if exist. Note if directory /logs/all doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script inception_FCN.py to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
+First download model checkpoints we've trained and put it in folder /logs and replace any other checkpoints if exist. Note if directory /logs/all doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script inception_FCN.py to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running.
 
 ### Fine-tune whole net
 
@@ -43,7 +43,7 @@ First delete all the files in /logs and /logs/all. After this, you need to provi
 
 (1) Add upsampling layer on the top of inception v3; freeze lower layers and just train the output layer of the pretrained model and the upsampling layers. To acheive this, change```tf.flags.DEFINE_string('checkpoint_exclude_scopes', ...)``` to be None and ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be ```'InceptionV3/Logits,InceptionV3/Upsampling'```. Make sure you've set the flag of skip_layers to the architecture you want. Set mode to train and run inception_FCN.py.
 
-(2) Fine-tune all the variables: Change```tf.flags.DEFINE_string('checkpoint_exclude_scopes', ...)``` to be ```'InceptionV3/Logits,InceptionV3/Upsampling'``` and ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Run inception_FCN.py again.
+(2) Fine-tune all the variables: Change```tf.flags.DEFINE_string('checkpoint_exclude_scopes', ...)``` to be ```'InceptionV3/Logits,InceptionV3/Upsampling'``` and ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Run inception_FCN.py again. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
 
 ## Results
 
