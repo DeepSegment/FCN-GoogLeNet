@@ -5,6 +5,14 @@ This project is a GoogLeNet Implementation of [Fully Convolutional Networks for 
 
 Our project is mainly based on these previous works and we performed several changes from them.
 
+## Requirements
+
+- Python 3.5.0+
+- TensorFlow 1.0+
+- matplotlib 2.0.2+
+- Cython 0.22+
+- [pydensecrf](https://github.com/lucasb-eyer/pydensecrf) v2
+
 ## Changes from previous work
 
 - Pre-trained model: [VGG16](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/slim)
