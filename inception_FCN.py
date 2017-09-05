@@ -22,17 +22,16 @@ tf.flags.DEFINE_string("data_dir", "Data_zoo/Pascal_Voc/", "path to dataset")
 tf.flags.DEFINE_float("learning_rate", "0.00032", "Learning rate for Adam Optimizer")
 tf.flags.DEFINE_bool('debug', "False", "Debug mode: True/ False")
 tf.flags.DEFINE_string('mode', "train", "Mode: train/ test/ visualize")
-# according to train_image_classifier.py
 tf.flags.DEFINE_string(
     'train_dir', 'logs/all',
     'Directory where checkpoints and event logs are written to.')
 tf.flags.DEFINE_string(
     'skip_layers', '8s',
     'Skip architecture to use: 32s/ 16s/ 8s')
+
 #####################
 # Fine-Tuning Flags #
 #####################
-
 tf.flags.DEFINE_string(
     'checkpoint_path', 'logs',
     'The path to a checkpoint from which to fine-tune.')
