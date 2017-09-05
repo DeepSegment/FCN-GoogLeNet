@@ -31,11 +31,11 @@ Our project is mainly based on these previous works and we performed several cha
 - TensorFlow 1.0+
 - matplotlib 2.0.2+
 - Cython 0.22+
-- [pydensecrf](https://github.com/lucasb-eyer/pydensecrf) v2
+- [PyDenseCRF](https://github.com/lucasb-eyer/pydensecrf) v2
 
 ### Visualize and test results 
 
-First download model checkpoints we've trained and put it in folder /logs and replace any other checkpoints if exist. Note if directory /logs/all doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script inception_FCN.py to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running.
+First download model checkpoints we've trained and put it in folder /logs and replace any other checkpoints if exist. Note if directory /logs/all doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script inception_FCN.py to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
 
 ### Fine-tune whole net
 
@@ -61,6 +61,12 @@ First delete all the files in /logs and /logs/all. After this, you need to provi
 <p align="center">
   <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_2.png" width="390"/>   <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/pic_3.png" width="400">
 </p>
+
+## Conclusions
+
+- VGG16 net outperforms GoogLeNet when dealt with semantic segmentation tasks;
+- A performance drop is expected when FCN is fed with a dataset containing large number of object classes;
+- Objects which have more examples in the training set, e.g. vehicles, humans, are easier to be correctly identified.
 
 ## Related materials
 ### Here is the presentation given by the authors of the original paper.
