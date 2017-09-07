@@ -5,6 +5,13 @@ This project is a GoogLeNet Implementation of [Fully Convolutional Networks for 
 
 Our project is mainly based on these previous works and we performed several changes from them.
 
+**Detailed Origins**
+- The "main" function was from [FCN.tensorflow/FCN.py](https://github.com/shekkizh/FCN.tensorflow/blob/master/FCN.py) with a little bit adaptation from [slim/train_image_classifier.py](https://github.com/tensorflow/models/blob/master/slim/train_image_classifier.py) with a few FLAGs and the "two-step" training procedure.
+- The network took [inception_v3](https://github.com/tensorflow/models/blob/master/slim/nets/inception_v3.py) directly and warm-started at [checkpoint](http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz). 
+- The upsampling layers were defined using [slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim).
+- The utility functions came from various projects with corresponding datasets.
+- The script was written for [PDC](https://www.pdc.kth.se/) with GPU acceleration nodes.
+
 ## Changes from previous work
 
 - Pre-trained model: [VGG16](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/slim)
