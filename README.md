@@ -52,7 +52,7 @@ First delete all the files in /logs and /logs/all. After this, you need to provi
 
 To acheive this, change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to ```'InceptionV3/Logits,InceptionV3/Upsampling'```. Make sure you've set the flag of skip_layers to the architecture you want. Set mode to train and run inception_FCN.py.
 
-**(2) Fine-tune all the variables: **
+**(2) Fine-tune all the variables:**
 
 Change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Also remember to change ```tf.flags.DEFINE_string('checkpoint_path', ...)``` to ```'logs'```. Run inception_FCN.py again. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
 
