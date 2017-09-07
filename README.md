@@ -42,23 +42,23 @@ Our project is mainly based on these previous works and we performed several cha
 
 ### Visualize and test results 
 
-First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=0B4wMcSmM_17YelpCVFNaMHktVDQ) and MIT Scene Parsing) we've trained and put it in folder /logs and replace any other checkpoints if exist. Note if directory /logs/all doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script inception_FCN.py to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. The segmentation results are saved in the folder /results.
+First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=0B4wMcSmM_17YelpCVFNaMHktVDQ) and MIT Scene Parsing) we've trained and put it in folder ```logs``` and replace any other checkpoints if exist. Note if directory ```/logs/all``` doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script ```inception_FCN.py``` to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. The segmentation results are saved in the folder ```results```.
 
 ### View loss graph using TensorBoard
 
-After training FCN, you can launch Tensorboard by typing in ```tensorboard --logdir=logs/all``` in terminal when you are inside the folder /FCN-GoogLeNet. Then open your web browser and navigate to ```localhost:6060```. Graph of pixelwise training loss and validation loss is expected to view now.
+After training FCN, you can launch Tensorboard by typing in ```tensorboard --logdir=logs/all``` in terminal when you are inside the folder ```FCN-GoogLeNet```. Then open your web browser and navigate to ```localhost:6060```. Graph of pixelwise training loss and validation loss is expected to view now.
 
 ### Fine-tune whole net
 
-First delete all the files in /logs and /logs/all. After this, you need to provide the path to a checkpoint from which to fine-tune. You can download the checkpoint of inception v3 model and correspondingly change ```tf.flags.DEFINE_string('checkpoint_path', '/path/to/checkpoint', 'The path to a checkpoint from which to fine-tune.')```. To avoid problems, it's better to directly copy the inception v3 model to /logs and change the above flag to ```tf.flags.DEFINE_string('checkpoint_path', 'logs/inception_v3.ckpt', ...)```, although this seems to be an unclever way. To train whole net, we need two steps:
+First delete all the files in ```/logs``` and ```/logs/all```. After this, you need to provide the path to a checkpoint from which to fine-tune. You can download the checkpoint of inception v3 model and correspondingly change ```tf.flags.DEFINE_string('checkpoint_path', '/path/to/checkpoint', 'The path to a checkpoint from which to fine-tune.')```. To avoid problems, it's better to directly copy the inception v3 model to ```/logs``` and change the above flag to ```tf.flags.DEFINE_string('checkpoint_path', 'logs/inception_v3.ckpt', ...)```, although this seems to be an unclever way. To train whole net, we need two steps:
 
 **(1) Add upsampling layer on the top of inception v3; freeze lower layers and just train the output layer of the pretrained model and the upsampling layers:**
 
-To acheive this, change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to ```'InceptionV3/Logits,InceptionV3/Upsampling'```. Make sure you've set the flag of skip_layers to the architecture you want. Set mode to train and run inception_FCN.py.
+To acheive this, change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to ```'InceptionV3/Logits,InceptionV3/Upsampling'```. Make sure you've set the flag of ```skip_layers``` to the architecture you want. Set mode to train and run ```inception_FCN.py```.
 
 **(2) Fine-tune all the variables:**
 
-Change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Also remember to change ```tf.flags.DEFINE_string('checkpoint_path', ...)``` to ```'logs'```. Run inception_FCN.py again. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
+Change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Also remember to change ```tf.flags.DEFINE_string('checkpoint_path', ...)``` to ```'logs'```. Run ```inception_FCN.py``` again. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
 
 ## Results
 
