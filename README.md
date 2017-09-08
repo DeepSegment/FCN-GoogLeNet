@@ -66,19 +66,19 @@ To train and test FCN on MIT Scene Parsing, two scripts should be changed manual
 
 **(1) Script ```inception_FCN.py```:**
 
-- Import module ```read_MITSceneParsingData``` and comment out ```read_PascalVocData``` (line 8-9);
-- Change the flag of ```data_dir``` to the path of MIT Scene Parsing (line 20-21);
-- Set variable ```NUM_OF_CLASSES = 151``` (line 59).
+- Import module ```read_MITSceneParsingData``` and comment out ```read_PascalVocData``` *(line 8-9)*;
+- Change the flag of ```data_dir``` to the path of MIT Scene Parsing *(line 20-21)*;
+- Set variable ```NUM_OF_CLASSES = 151``` *(line 59)*.
 
 **(2) Script ```BatchDatSetReader.py```:**
 
-- Change ```...[np.expand_dims(self._transform(filename['annotation'], True), ...)``` to ```...[np.expand_dims(self._transform(filename['annotation'], False), ...)``` (line 39).
+- Change ```...[np.expand_dims(self._transform(filename['annotation'], True), ...)``` to ```...[np.expand_dims(self._transform(filename['annotation'], False), ...)``` *(line 39)*.
 
 ## Results
 
-#### Training loss
+#### Training and validation loss of FCN-8s trained on MIT Scene Parsing
 <p align="center">
-<img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/loss.png"/>
+<img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/losses_scene.png"/>
 </p>
 
 #### PASCAL VOC
