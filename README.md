@@ -60,6 +60,20 @@ To acheive this, change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to
 
 Change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Also remember to change ```tf.flags.DEFINE_string('checkpoint_path', ...)``` to ```'logs'```. Run ```inception_FCN.py``` again. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
 
+### Change dataset to MIT Scene Parsing
+
+To train and test FCN on MIT Scene Parsing, two scripts should be changed manually as follow:
+
+(1) Script ```inception_FCN.py```: 
+
+- Import module ```read_MITSceneParsingData``` and comment out ```read_PascalVocData``` (line 8-9);
+- Change the flag of ```data_dir``` to the path of MIT Scene Parsing (line 20-21);
+- Set variable ```NUM_OF_CLASSES = 151``` (line 59).
+
+(2) Script ```BatchDatSetReader.py```:
+
+- Change the flag in ```...[np.expand_dims(self._transform(filename['annotation'], True), ...)``` to ```False``` (line 39).
+
 ## Results
 
 #### Training loss
