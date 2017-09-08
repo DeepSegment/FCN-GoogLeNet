@@ -76,7 +76,7 @@ To train and test FCN on MIT Scene Parsing, two scripts should be changed manual
 
 ## Results
 
-#### Training and validation loss of FCN-8s trained on MIT Scene Parsing
+#### Training (red) and validation (orange) loss of FCN-8s trained on MIT Scene Parsing
 <p align="center">
 <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/losses_scene.png"/>
 </p>
