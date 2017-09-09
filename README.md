@@ -76,6 +76,11 @@ To train and test FCN on MIT Scene Parsing, two scripts should be changed manual
 
 ## Results
 
+#### Training (orange) and validation (red) loss of FCN-8s trained on PASCAL VOC 2012
+<p align="center">
+<img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/losses_pascal.png"/>
+</p>
+
 #### Training (orange) and validation (red) loss of FCN-8s trained on MIT Scene Parsing
 <p align="center">
 <img src="https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/results/losses_scene.png"/>
