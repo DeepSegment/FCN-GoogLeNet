@@ -6,7 +6,7 @@ This project is a GoogLeNet Implementation of [Fully Convolutional Networks for 
 Our project is mainly based on these previous works and we performed several changes from them. We attach our [report](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/doc/report.pdf) here for reference.
 
 **Detailed Origins**
-- The "main" function was from [FCN.tensorflow/FCN.py](https://github.com/shekkizh/FCN.tensorflow/blob/master/FCN.py) with a little bit adaptation from [slim/train_image_classifier.py](https://github.com/tensorflow/models/blob/master/slim/train_image_classifier.py) with a few FLAGs and the "two-step" training procedure.
+- The "main" function was from [FCN.tensorflow/FCN.py](https://github.com/shekkizh/FCN.tensorflow/blob/master/FCN.py) with a little bit adaptation from [slim/train_image_classifier.py](https://github.com/tensorflow/models/blob/master/research/slim/train_image_classifier.py) with a few FLAGs and the "two-step" training procedure.
 - The network took [inception_v3](https://github.com/tensorflow/models/blob/master/slim/nets/inception_v3.py) directly and warm-started at [checkpoint](http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz). 
 - The upsampling layers were defined using [slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim).
 - The utility functions came from various projects with corresponding datasets.
@@ -14,7 +14,7 @@ Our project is mainly based on these previous works and we performed several cha
 
 ## Changes from previous work
 
-- Pre-trained model: [VGG16](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/slim)
+- Pre-trained model: [VGG16](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/research/slim)
 - Framework: Caffe -> TensorFlow
 - Datasets: [PASCAL VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) (20 classes) + [MIT Scene Parsing](http://sceneparsing.csail.mit.edu/) (150 classes)
 
@@ -42,7 +42,7 @@ Our project is mainly based on these previous works and we performed several cha
 
 ### Visualize and test results 
 
-First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=0B4wMcSmM_17YelpCVFNaMHktVDQ) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YT05FOHFrU3JlRUU)) we've trained and put it in folder ```logs``` and replace any other checkpoints if exist. Note if directory ```/logs/all``` doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script ```inception_FCN.py``` to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. The segmentation results are saved in the folder ```results```.
+First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU)) we've trained and put it in folder ```logs``` and replace any other checkpoints if exist. Note if directory ```/logs/all``` doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script ```inception_FCN.py``` to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. The segmentation results are saved in the folder ```results```.
 
 ### View loss graph using TensorBoard
 
