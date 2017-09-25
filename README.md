@@ -42,7 +42,7 @@ Our project is mainly based on these previous works and we performed several cha
 
 ### Visualize and test results 
 
-First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=0B4wMcSmM_17YelpCVFNaMHktVDQ) and MIT Scene Parsing) we've trained and put it in folder ```logs``` and replace any other checkpoints if exist. Note if directory ```/logs/all``` doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script ```inception_FCN.py``` to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. The segmentation results are saved in the folder ```results```.
+First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=0B4wMcSmM_17YelpCVFNaMHktVDQ) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YT05FOHFrU3JlRUU)) we've trained and put it in folder ```logs``` and replace any other checkpoints if exist. Note if directory ```/logs/all``` doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script ```inception_FCN.py``` to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. The segmentation results are saved in the folder ```results```.
 
 ### View loss graph using TensorBoard
 
