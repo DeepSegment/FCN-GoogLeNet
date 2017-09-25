@@ -58,7 +58,7 @@ To acheive this, change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to
 
 **(2) Fine-tune all the variables:**
 
-Change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Also remember to change ```tf.flags.DEFINE_string('checkpoint_path', ...)``` to ```'logs'```. Run ```inception_FCN.py``` again. If the code is planned to run on [PDC](https://www.pdc.kth.se/) clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job.
+Change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Also remember to change ```tf.flags.DEFINE_string('checkpoint_path', ...)``` to ```'logs'```. Run ```inception_FCN.py``` again. If the code is planned to run on [PDC clusters](https://www.pdc.kth.se/), run ```sbatch ./batchpyjobunix.sh``` to submit your job.
 
 ### Change dataset to MIT Scene Parsing
 
