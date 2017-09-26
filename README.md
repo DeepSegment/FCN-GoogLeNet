@@ -10,7 +10,7 @@ Our project is mainly based on these previous works and we performed several cha
 - The network took [inception_v3](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v3.py) directly and warm-started at [checkpoint](http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz). 
 - The upsampling layers were defined using [slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim).
 - The utility functions came from various projects with corresponding datasets.
-- The scripts were written for [PDC](https://www.pdc.kth.se/) with GPU acceleration nodes.
+- The bash scripts were written for [PDC](https://www.pdc.kth.se/) with GPU acceleration nodes.
 
 ## Changes from previous work
 
