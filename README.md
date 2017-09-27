@@ -12,6 +12,9 @@ Our project is mainly based on these previous works and we performed several cha
 - The utility functions came from various projects with corresponding datasets.
 - The bash scripts were written for [PDC](https://www.pdc.kth.se/) with GPU acceleration nodes.
 
+**Model Downloads**
+We provide the trained weights for two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one.
+
 ## Changes from previous work
 
 - Pre-trained model: [VGG16](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) -> [GoogLeNet (inception v3)](https://github.com/tensorflow/models/tree/master/research/slim)
