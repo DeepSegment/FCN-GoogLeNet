@@ -112,7 +112,7 @@ To train and test FCN on MIT Scene Parsing, two scripts should be changed manual
 ## Future work
 
 - Rewrite code so that some manual operations (like copying pretrained model, changing file path) can be avoided;
-- Play around with parameters of the FCN trained on PASCAL VOC and try to find a better initialization (grid search);
+- Play around with parameters of the FCN trained on PASCAL VOC and try to find a better initialization; try to implement grid search or random search for some major parameters;
 - Train FCNs on other segmentation dataset such as [MS COCO](http://cocodataset.org/#home).
 
 ## Related materials
