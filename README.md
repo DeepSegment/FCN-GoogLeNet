@@ -51,15 +51,15 @@ First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=
 
 ### View loss graph using TensorBoard
 
-After training FCN, you can launch Tensorboard by typing in ```tensorboard --logdir=logs/all``` in terminal when you are inside the folder ```FCN-GoogLeNet```. Then open your web browser and navigate to ```localhost:6060```. Graph of pixelwise training loss and validation loss is expected to view now.
+After training FCN (or downloading our models), you can launch Tensorboard by typing in ```tensorboard --logdir=logs/all``` in terminal when you are inside the folder ```FCN-GoogLeNet```. Then open your web browser and navigate to ```localhost:6060```. Graph of pixelwise training loss and validation loss is expected to view now.
 
 ### Fine-tune whole net
 
-First delete all the files in ```/logs``` and ```/logs/all```. After this, you need to provide the path to a checkpoint from which to fine-tune. You can download the checkpoint of inception v3 model and correspondingly change ```tf.flags.DEFINE_string('checkpoint_path', '/path/to/checkpoint', 'The path to a checkpoint from which to fine-tune.')```. To avoid problems, it's better to directly copy the inception v3 model to ```/logs``` and change the above flag to ```tf.flags.DEFINE_string('checkpoint_path', 'logs/inception_v3.ckpt', ...)```, although this seems to be an unclever way. To train whole net, we need two steps:
+The following operations are needed if you want to train your own model from scratch. First delete all the files in ```/logs``` and ```/logs/all```. After this, you need to provide the path to a checkpoint from which to fine-tune. You can download the checkpoint of inception v3 model and correspondingly change ```tf.flags.DEFINE_string('checkpoint_path', '/path/to/checkpoint', 'The path to a checkpoint from which to fine-tune.')```. To avoid problems, it's better to directly copy the inception v3 model to ```/logs``` and change the above flag to ```tf.flags.DEFINE_string('checkpoint_path', 'logs/inception_v3.ckpt', ...)```, although this seems to be an unclever way. To train whole net, we need two steps:
 
 **(1) Add upsampling layer on the top of inception v3; freeze lower layers and just train the output layer of the pretrained model and the upsampling layers:**
 
-To acheive this, change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to ```'InceptionV3/Logits,InceptionV3/Upsampling'```. Make sure you've set the flag of ```skip_layers``` to the architecture you want. Set mode to train and run ```inception_FCN.py```.
+To acheive this, change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to ```'InceptionV3/Logits,InceptionV3/Upsampling'```. Make sure you've set the flag of ```skip_layers``` to the architecture you want. Set mode to train and run ```inception_FCN.py```. If the code is planned to run on PDC clusters, run ```sbatch ./batchpyjobunix.sh``` to submit your job to the queuing system [Slurm](https://www.pdc.kth.se/resources/computers/beskow/how-to/run).
 
 **(2) Fine-tune all the variables:**
 
@@ -106,6 +106,12 @@ To train and test FCN on MIT Scene Parsing, two scripts should be changed manual
 - VGG16 net outperforms GoogLeNet when dealt with semantic segmentation tasks;
 - A performance drop is expected when FCN is fed with a dataset containing large number of object classes;
 - Objects which have more examples in the training set, e.g. vehicles, humans, are easier to be correctly identified.
+
+## Future work
+
+- Rewrite code so that some manual operations (like copying pretrained model, changing file path) can be largely avoided;
+- Play around with parameters of the FCN trained on PASCAL VOC and try to find a better initialization (grid search or something);
+- Train FCNs on other segmentation dataset such as *MS COCO*.
 
 ## Related materials
 ### Here is the presentation given by the authors of the original paper.
