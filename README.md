@@ -3,7 +3,7 @@ This is a repo for course project of [DD2424 Deep Learning in Data Science](http
 
 This project is a GoogLeNet Implementation of [Fully Convolutional Networks for Semantic Segmentation, CVPR 2015](https://github.com/shelhamer/fcn.berkeleyvision.org) in TensorFlow. Another Tensorflow implementation: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow). 
 
-Our project is mainly based on these previous works and we performed several changes from them. We attach our [report](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/doc/report.pdf) here for reference. 
+Our project is mainly based on these previous works and we performed several changes from them. We attach our [report](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/doc/report.pdf) and [slides](https://docs.google.com/presentation/d/18vOFGMYoj6pqJS9KlWr9exc44tFza1LMqx5PiebpAF4/edit?usp=sharing) (with several page skipped for presentation) here for reference. 
 
 **Detailed Origins**
 - The "main" function was from [FCN.tensorflow/FCN.py](https://github.com/shekkizh/FCN.tensorflow/blob/master/FCN.py) with a little bit adaptation from [slim/train_image_classifier.py](https://github.com/tensorflow/models/blob/master/research/slim/train_image_classifier.py) with a few FLAGs and the "two-step" training procedure.
