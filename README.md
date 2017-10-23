@@ -1,13 +1,13 @@
 # FCN-GoogLeNet
 This is a repo for course project of [DD2424 Deep Learning in Data Science](https://www.kth.se/social/course/DD2424/) at KTH.
 
-This project is a GoogLeNet Implementation of [Fully Convolutional Networks for Semantic Segmentation, CVPR 2015](https://github.com/shelhamer/fcn.berkeleyvision.org) in TensorFlow. Another Tensorflow implementation: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow). 
+This project is a GoogLeNet Implementation of [*Fully Convolutional Networks for Semantic Segmentation, CVPR 2015*](https://github.com/shelhamer/fcn.berkeleyvision.org) in TensorFlow. Another Tensorflow implementation: [FCN.tensorflow](https://github.com/shekkizh/FCN.tensorflow). 
 
 Our project is mainly based on these previous works and we performed several changes from them. We attach our [report](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/doc/report.pdf) and [slides](https://docs.google.com/presentation/d/18vOFGMYoj6pqJS9KlWr9exc44tFza1LMqx5PiebpAF4/edit?usp=sharing) (with several introductory pages skipped for presentation) here for reference. 
 
 **Why this repo?**
 
-In the original paper [*Fully Convolutional Networks for Semantic Segmentation, CVPR 2015*](https://arxiv.org/pdf/1411.4038.pdf), the authors mentioned several results of FCN-GoogLeNet and compared them with FCN-VGG16. The results showed a worse performance of GoogLeNet than VGG16 in semantic segmentation tasks. Their GoogLeNet implementation is, however, still not open-sourced though they mentioned in their documentation that it is coming soon. Plus, when they performed their training, they used their own reimplementation of GoogLeNet as the pre-trained model since there was no publicly available version of GoogLeNet at that time. Given the above two points, we are quite curious about how it would perform if a public version of GoogLeNet is actually put into use, and it would also be a good practice to fill the vacancy of open-source GoogLeNet implementation. That's basically why we make this repo.
+In the original paper [*Fully Convolutional Networks for Semantic Segmentation*](https://arxiv.org/pdf/1411.4038.pdf), the authors mentioned several results of FCN-GoogLeNet and compared them with FCN-VGG16. The results showed a worse performance of GoogLeNet than VGG16 in semantic segmentation tasks. Their GoogLeNet implementation is, however, still not open-sourced though they mentioned in their repo documentation that it is coming soon. Plus, when they performed their training, they used their own reimplementation of GoogLeNet as the pre-trained model since there was no publicly available version of GoogLeNet at that time. Given the above two points, we are quite curious about how it would perform if a public version of GoogLeNet is actually put into use, and it would also be a good practice to fill the vacancy of open-source GoogLeNet implementation. That's basically why we make this repo.
 
 **Detailed Origins**
 
