@@ -5,7 +5,12 @@ This project is a GoogLeNet Implementation of [Fully Convolutional Networks for 
 
 Our project is mainly based on these previous works and we performed several changes from them. We attach our [report](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/doc/report.pdf) and [slides](https://docs.google.com/presentation/d/18vOFGMYoj6pqJS9KlWr9exc44tFza1LMqx5PiebpAF4/edit?usp=sharing) (with several introductory pages skipped for presentation) here for reference. 
 
+**Why this repo?**
+
+In the original paper [*Fully Convolutional Networks for Semantic Segmentation, CVPR 2015*](https://arxiv.org/pdf/1411.4038.pdf), the authors mentioned several results of FCN-GoogLeNet and compared them with those of FCN-VGG16. The results showed a worse performance of GoogLeNet than VGG16 in semantic segmentation tasks. This GoogLeNet implementation is, however, not open-sourced though they mentioned in their documentation that it is coming soon. Plus, when they performed their training, they used their own reimplementation of GoogLeNet as the pre-trained model since there was no publicly available version of GoogLeNet at that time. Therefore, we are quite curious about how it would perform if a public version of GoogLeNet is actually put into use.
+
 **Detailed Origins**
+
 - The "main" function was from [FCN.tensorflow/FCN.py](https://github.com/shekkizh/FCN.tensorflow/blob/master/FCN.py) with a little bit adaptation from [slim/train_image_classifier.py](https://github.com/tensorflow/models/blob/master/research/slim/train_image_classifier.py) with a few FLAGs and the "two-step" training procedure.
 - The network took [inception_v3](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v3.py) directly and warm-started at [checkpoint](http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz). 
 - The upsampling layers were defined using [slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim).
@@ -15,7 +20,6 @@ Our project is mainly based on these previous works and we performed several cha
 **Model Downloads**
 
 We provide models trained on two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one.
-
 
 ## Changes from previous work
 
