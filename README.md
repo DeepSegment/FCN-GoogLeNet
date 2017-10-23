@@ -5,13 +5,9 @@ This project is a GoogLeNet Implementation of [*Fully Convolutional Networks for
 
 Our project is mainly based on these previous works and we performed several changes from them. We attach our [report](https://github.com/DeepSegment/FCN-GoogLeNet/blob/master/doc/report.pdf) and [slides](https://docs.google.com/presentation/d/18vOFGMYoj6pqJS9KlWr9exc44tFza1LMqx5PiebpAF4/edit?usp=sharing) (with several introductory pages skipped for presentation) here for reference. 
 
-**Why this repo?**
+**Model Downloads**
 
-In the original paper [*Fully Convolutional Networks for Semantic Segmentation*](https://arxiv.org/pdf/1411.4038.pdf), the authors mentioned several results of FCN-GoogLeNet and compared them with FCN-VGG16. The results showed a worse performance of GoogLeNet than VGG16 in semantic segmentation tasks. Two things make this conclusion questionable:
-- Their GoogLeNet implementation is, however, still not open-sourced though they mentioned in their repo documentation that it is coming soon. 
-- When the authors performed their training, they used their own reimplementation of GoogLeNet as the pre-trained model since there was no publicly available version of GoogLeNet at that time. 
-
-Given the above two points, we are quite curious about how it would perform if a public version of GoogLeNet is actually put into use, and it would also be a good practice to fill the vacancy of open-source FCN-GoogLeNet. That's basically why we make this repo.
+We provide models trained on two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one.
 
 **Detailed Origins**
 
@@ -21,9 +17,14 @@ Given the above two points, we are quite curious about how it would perform if a
 - The utility functions came from various projects with corresponding datasets.
 - The bash scripts were written for [PDC](https://www.pdc.kth.se/) with GPU acceleration nodes.
 
-**Model Downloads**
+## Why this repo?
 
-We provide models trained on two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one.
+In the original paper [*Fully Convolutional Networks for Semantic Segmentation*](https://arxiv.org/pdf/1411.4038.pdf), the authors mentioned several results of FCN-GoogLeNet and compared them with FCN-VGG16. The results showed a worse performance of GoogLeNet than VGG16 in semantic segmentation tasks. Two things make this conclusion questionable:
+
+- Their GoogLeNet implementation is, however, still not open-sourced though they mentioned in their repo documentation that it is coming soon. 
+- When the authors performed their training, they used their own reimplementation of GoogLeNet as the pre-trained model since there was no publicly available version of GoogLeNet at that time. 
+
+Given the above two points, we are quite curious about how it would perform if a public version of GoogLeNet is actually put into use, and it would also be a good practice to fill the vacancy of open-source FCN-GoogLeNet. That's basically why we make this repo.
 
 ## Changes from previous work
 
