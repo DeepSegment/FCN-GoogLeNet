@@ -7,7 +7,7 @@ Our project is mainly based on these previous works and we performed several cha
 
 **Model Downloads**
 
-We provide models trained on two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one. For more details, please go [here](#here).
+We provide models trained on two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one. For more details, please read the subsection [*Visualize and test results*](#here) for help.
 
 **Detailed Origins**
 
@@ -54,8 +54,9 @@ Given the above two points, we are quite curious about how it would perform if a
 - Cython 0.22+
 - [PyDenseCRF](https://github.com/lucasb-eyer/pydensecrf) v2
 
-### Visualize and test results 
 <a name="here"></a>
+### Visualize and test results 
+
 First download model checkpoints ([PASCAL VOC](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU)) we've trained and put it in folder ```logs``` and replace any other checkpoints if exist. Note if directory ```/logs/all``` doesn't exist, please create it by ```mkdir FCN-GoogLeNet/logs/all```. Then change the flags ```tf.flags.DEFINE_string('mode', "visualize", "Mode: train/ test/ visualize")``` at the beginning of the script ```inception_FCN.py``` to set the mode to visulize or test results. After that, run ```python inception_FCN.py``` from terminal to start running. The segmentation results are saved in the folder ```results```.
 
 ### View loss graph using TensorBoard
