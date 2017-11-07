@@ -7,7 +7,7 @@ Our project is mainly based on these previous works and we performed several cha
 
 **Model Downloads**
 
-We provide models trained on two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one. For more details, please read the subsection [*Visualize and test results*](#here) for help.
+We provide models trained on two different datasets - [PASCAL VOC 2012](https://drive.google.com/open?id=0B4wMcSmM_17Ya25lY0pabmNRSUE) and [MIT Scene Parsing](https://drive.google.com/open?id=0B4wMcSmM_17YcEVka3BCT09mTUU). Please download the corresponding folder, rename it to ```logs``` and put them in your local repo to replace the old one. For more details, please read the subsection [**Visualize and test results**](#here).
 
 **Detailed Origins**
 
