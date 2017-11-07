@@ -79,7 +79,7 @@ Change ```tf.flags.DEFINE_string('trainable_scopes', ...)``` to be None. Also re
 
 ### Change dataset to MIT Scene Parsing
 
-To train and test FCN on MIT Scene Parsing, two scripts should be changed manually as follow. Afterwards, you can play around with this new dataset according to the steps mentioned above.
+To train and test FCN on MIT Scene Parsing, two scripts should be changed manually as follow. Afterwards, you can play around with this new dataset according to the steps mentioned [above](#here).
 
 **(1) Script ```inception_FCN.py```:**
 
