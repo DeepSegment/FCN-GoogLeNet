@@ -67,7 +67,7 @@ After training FCN (or downloading our models), you can launch Tensorboard by ty
 
 The following operations are needed if you want to train your own model from scratch. 
 
-First delete all the files in ```/logs``` and ```/logs/all```. After this, you need to provide the path to a checkpoint from which to fine-tune. You can download the checkpoint of inception v3 model and correspondingly change ```tf.flags.DEFINE_string('checkpoint_path', '/path/to/checkpoint', 'The path to a checkpoint from which to fine-tune.')```. To avoid problems, it's better to directly copy the inception v3 model to ```/logs``` and change the above flag to ```tf.flags.DEFINE_string('checkpoint_path', 'logs/inception_v3.ckpt', ...)```, although this seems to be an unclever way. To train whole net, we need two steps:
+First delete all the files in ```/logs``` and ```/logs/all```. After this, you need to provide the path to a checkpoint from which to fine-tune. You can download the [checkpoint](http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz) of inception v3 model and correspondingly change ```tf.flags.DEFINE_string('checkpoint_path', '/path/to/checkpoint', 'The path to a checkpoint from which to fine-tune.')```. To avoid problems, it's better to directly copy the inception v3 model to ```/logs``` and change the above flag to ```tf.flags.DEFINE_string('checkpoint_path', 'logs/inception_v3.ckpt', ...)```, although this seems to be an unclever way. To train whole net, we need two steps:
 
 **(1) Add upsampling layer on the top of inception v3; freeze lower layers and just train the output layer of the pretrained model and the upsampling layers:**
 
